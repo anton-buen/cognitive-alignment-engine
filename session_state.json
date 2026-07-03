@@ -1,0 +1,19 @@
+{
+  "meeting_metadata": {
+    "session_id": "init-run",
+    "active_phase": "MODEL_FEASIBILITY"
+  },
+  "global_constraints": {
+    "max_p99_latency_ms": 100,
+    "max_memory_allocation_gb": 16
+  },
+  "participants": {
+    "user_1": {"name": "Alice", "role": "Data Analyst"},
+    "user_2": {"name": "Bob", "role": "Production ML Engineer"}
+  },
+  "live_transcript": [],
+  "private_nudges": {
+    "Data Analyst": [],
+    "Production ML Engineer": []
+  }
+}

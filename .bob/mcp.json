@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "cognitive-alignment-engine-server": {
+      "command": "python",
+      "args": ["src/engine.py"],
+      "env": {
+        "ENV_MODE": "development",
+        "PERSISTENCE_FILE": "session_state.json"
+      }
+    }
+  }
+}
