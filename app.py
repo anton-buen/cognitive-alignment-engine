@@ -130,18 +130,19 @@ def apply_adaptive_theme():
         hr { border-color: var(--naur-border) !important; margin: 2.5rem 0; }
         
         /* 7. Permanent Fixed Footer */
-        .footer-note { 
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--naur-bg);
-            text-align: center; 
-            font-size: 0.75rem; 
-            padding: 0.75rem 0; 
-            color: var(--naur-muted) !important;
-            font-family: 'IBM Plex Sans', sans-serif !important; 
-            z-index: 1000;
+        [data-testid="stChatInput"] {
+            padding-bottom: 2rem !important; 
+        }
+        
+        [data-testid="stChatInput"]::after {
+            content: "Project Naur helps catch technical blind spots before coding begins. AI can make mistakes, so always review these constraints with your team.";
+            display: block;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--naur-muted);
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin-top: 0.5rem;
+            opacity: 0.8;
             pointer-events: none;
         }
     </style>
