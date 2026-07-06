@@ -1,19 +1,17 @@
 {
-  "meeting_metadata": {
-    "session_id": "init-run",
-    "active_phase": "MODEL_FEASIBILITY"
-  },
-  "global_constraints": {
-    "max_p99_latency_ms": 100,
-    "max_memory_allocation_gb": 16
-  },
-  "participants": {
-    "user_1": {"name": "Alice", "role": "Data Analyst"},
-    "user_2": {"name": "Bob", "role": "Production ML Engineer"}
-  },
-  "live_transcript": [],
-  "private_nudges": {
-    "Data Analyst": [],
-    "Production ML Engineer": []
-  }
+  "extractions": [],
+  "thread": [
+    {
+      "role": "human",
+      "content": "[Product Manager] Let's add a live activity feed on the dashboard that updates instantly whenever a team member edits a shared document."
+    },
+    {
+      "role": "assistant",
+      "assumptions": {
+        "FE": "Needs WebSockets or Long-Polling to handle 'real-time' updates without freezing the React thread.",
+        "BE": "Must implement strict rate-limiting on the API; querying on every page refresh will crash the server.",
+        "DS": "Browsing habits are unstructured text. The model needs an async queue because inference takes 3-5 seconds."
+      }
+    }
+  ]
 }

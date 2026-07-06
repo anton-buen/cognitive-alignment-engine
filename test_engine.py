@@ -6,6 +6,7 @@ import os
 import json
 import requests
 
+os.environ["USE_MOCK_LLM"] = "False"
 class TestCognitiveAlignmentEngine(unittest.TestCase):
     def setUp(self):
         # [GATE 1: STATE] Reset a clean state before each test to prevent race conditions
